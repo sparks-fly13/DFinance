@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "dfinance_backend": {
+      "main": "src/dfinance_backend/main.mo",
+      "type": "motoko"
+    },
+    "dfinance_frontend": {
+      "dependencies": [
+        "dfinance_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dfinance_frontend/src/index.html"
+      },
+      "source": [
+        "src/dfinance_frontend/assets",
+        "dist/dfinance_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
